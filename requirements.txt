@@ -1,3 +1,4 @@
+python==3.11
 streamlit
 pandas
 gensim==4.3.2 # Pinning version similar to your colab
@@ -15,4 +16,5 @@ protobuf==3.20 # Often needed to resolve dependency conflicts, adjust if needed
 wrapt # dependency for smart-open
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch # Required by sentence-transformers
+
 transformers # Required by sentence-transformers
