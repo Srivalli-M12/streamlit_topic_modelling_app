@@ -1,0 +1,18 @@
+streamlit
+pandas
+gensim==4.3.2 # Pinning version similar to your colab
+nltk
+spacy>=3.0 # Ensure spacy v3+ for model loading
+bertopic
+sentence-transformers
+hdbscan
+umap-learn
+plotly
+scikit-learn
+numpy
+smart-open # dependency for gensim
+protobuf==3.20 # Often needed to resolve dependency conflicts, adjust if needed
+wrapt # dependency for smart-open
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch # Required by sentence-transformers
+transformers # Required by sentence-transformers
