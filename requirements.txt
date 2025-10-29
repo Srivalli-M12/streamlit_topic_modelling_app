@@ -1,4 +1,3 @@
-python==3.11
 streamlit
 pandas
 gensim==4.3.2 # Pinning version similar to your colab
@@ -18,3 +17,4 @@ wrapt # dependency for smart-open
 torch # Required by sentence-transformers
 
 transformers # Required by sentence-transformers
+
