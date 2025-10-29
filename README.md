@@ -60,7 +60,6 @@ Milestone 4: Development of the multi-page Streamlit application to integrate al
 # Project Structure
 
 streamlit_topic_app/
-├── .venv/                     # Virtual environment
 ├── pages/                     # Streamlit pages (steps 1-7)
 │   ├── 1_Load_Data.py
 │   ├── 2_Preprocess_WordCount.py
