@@ -3,9 +3,8 @@
 # --- Core Packages ---
 streamlit
 pandas
-numpy<1.26  # Add constraint BEFORE scipy/gensim
-scipy==1.10.1 # Keep this pinned
-gensim==4.3.2 # Keep this pinned
+scipy==1.10.1      # Pinned for gensim compatibility
+gensim==4.3.2      # Pinned for scipy compatibility
 
 # --- Preprocessing ---
 nltk
@@ -13,20 +12,15 @@ spacy>=3.0
 
 # --- BERTopic and Dependencies ---
 bertopic
-sentence-transformers # Might pull torch/transformers
+sentence-transformers
 hdbscan
 umap-learn
-scikit-learn # Often pulled by others, but good to list
+scikit-learn
 
 # --- Other Utilities ---
 plotly
-smart-open # dependency for gensim
-protobuf==3.20 # Keep if needed
-wrapt # dependency for smart-open
+smart-open
+protobuf==3.20    # Keep this, it often helps
+wrapt
 
-# --- Ensure Torch/Transformers are compatible if needed ---
-# Torch often needs specific handling, but sentence-transformers might manage it.
-# If errors related to Torch occur later, you might need the --find-links again.
-# --find-links https://download.pytorch.org/whl/torch_stable.html
-# torch
-# transformers
+# Let sentence-transformers handle torch/transformers
