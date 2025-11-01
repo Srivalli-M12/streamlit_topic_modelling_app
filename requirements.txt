@@ -3,8 +3,9 @@
 # --- Core Packages ---
 streamlit
 pandas
-scipy==1.10.1      # Pinned for gensim compatibility
-gensim==4.3.2      # Pinned for scipy compatibility
+# Let pip choose the latest compatible versions
+scipy 
+gensim
 
 # --- Preprocessing ---
 nltk
@@ -20,7 +21,5 @@ scikit-learn
 # --- Other Utilities ---
 plotly
 smart-open
-protobuf==3.20    # Keep this, it often helps
+protobuf==3.20
 wrapt
-
-# Let sentence-transformers handle torch/transformers
