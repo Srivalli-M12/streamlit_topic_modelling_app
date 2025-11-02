@@ -1,22 +1,22 @@
---- Core Application ---
+#--- Core Application ---
 
 streamlit
 pandas
 plotly
 
---- Preprocessing (NLTK & spaCy) ---
+#--- Preprocessing (NLTK & spaCy) ---
 
 nltk
 spacy>=3.0
 
---- LDA Model (Pinned for Python 3.11) ---
+#--- LDA Model (Pinned for Python 3.11) ---
 
-These specific versions are required for Python 3.11 compatibility
+#These specific versions are required for Python 3.11 compatibility
 
 scipy==1.10.1
 gensim==4.3.2
 
---- BERTopic Model ---
+#--- BERTopic Model ---
 
 bertopic
 sentence-transformers
@@ -24,12 +24,13 @@ hdbscan
 umap-learn
 scikit-learn
 
---- Utilities & Dependencies ---
+#--- Utilities & Dependencies ---
 
 smart-open
 wrapt
 protobuf==3.20
 
---- spaCy Model (Direct URL to fix resolver issues) ---
+#--- spaCy Model (Direct URL to fix resolver issues) ---
 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
