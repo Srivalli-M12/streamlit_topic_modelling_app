@@ -15,17 +15,33 @@ from email import encoders
 import os
 import plotly.graph_objects as go
 import numpy as np # Needed for array_split
+import subprocess
 
 # --- Preprocessing ---
 
 # Load spacy model once
 @st.cache_resource
 def load_spacy_model():
+    model_name = "en_core_web_sm"
     try:
-        return spacy.load("en_core_web_sm")
+        # First, try to load the model
+        return spacy.load(model_name)
     except OSError:
-        st.error("Spacy model 'en_core_web_sm' not found. Please run 'python -m spacy download en_core_web_sm'")
-        st.stop()
+        # If model isn't found, it throws an OSError
+        # Now, try to download it using the command line
+        st.warning(f"Spacy model '{model_name}' not found. Attempting to download...")
+        try:
+            # Run the download command in the Streamlit Cloud container
+            subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+            
+            # After a successful download, try loading it again
+            return spacy.load(model_name)
+        
+        except Exception as e:
+            # If the download fails for any reason
+            st.error(f"Failed to download spaCy model '{model_name}'. Error: {e}")
+            st.error("The app cannot continue. Please try rebooting the app on Streamlit Cloud.")
+            st.stop()
 
 nlp = load_spacy_model()
 
@@ -237,3 +253,4 @@ def convert_df_to_csv(df):
    if df is None:
        return b"" # Return empty bytes if df is None
    return df.to_csv(index=False).encode('utf-8')
+
