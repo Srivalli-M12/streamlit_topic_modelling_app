@@ -1,50 +1,14 @@
-# requirements.txt
-
-
-
-# --- Core Packages ---
-
 streamlit
-
 pandas
-
-# Let pip choose the latest compatible versions
-
-scipy 
-
-gensim
-
-
-
-# --- Preprocessing ---
-
-nltk
-
-spacy>=3.0
-
-
-
-# --- BERTopic and Dependencies ---
-
-bertopic
-
-sentence-transformers
-
-hdbscan
-
-umap-learn
-
-scikit-learn
-
-
-
-# --- Other Utilities ---
-
 plotly
-
+nltk
+spacy>=3.0
+gensim
+bertopic
+sentence-transformers
+hdbscan
+umap-learn
+scikit-learn
 smart-open
-
+wrapt
 protobuf==3.20
-
-wrapt 
-
