@@ -1,15 +1,25 @@
+# requirements.txt
+
+# --- Core Packages ---
 streamlit
 pandas
-plotly
+# Let pip choose the latest compatible versions
+scipy 
+gensim
+
+# --- Preprocessing ---
 nltk
 spacy>=3.0
-gensim
+
+# --- BERTopic and Dependencies ---
 bertopic
 sentence-transformers
 hdbscan
 umap-learn
 scikit-learn
+
+# --- Other Utilities ---
+plotly
 smart-open
-wrapt
 protobuf==3.20
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+wrapt
