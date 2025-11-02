@@ -46,4 +46,5 @@ smart-open
 
 protobuf==3.20
 
-wrapt, tell me what can i do to overcome this errror, "Spacy model 'en_core_web_sm' not found. Please run 'python -m spacy download en_core_web_sm'
+wrapt 
+
